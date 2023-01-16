@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customer Loader</title>
+    <link rel="stylesheet" href="loadStyle.css" />
+    <link rel="stylesheet" href="accHome.css" />
+  </head>
+  <body>
+    <img src="AccLogo.png" alt="" width="300px" height="160px" />
+    <h1>AAQS - AccSight Automated Quoting System</h1>
+    <nav id="navBar">
+      <ul>
+        <li><a href="accHome.php">Home</a></li>
+        <li>
+          <a href="">Load</a>
+          <ul>
+            <li><a href="loadCustomer.html">New Customer</a></li>
+            <li><a href="loadProduct.html">New Product</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="">Create</a>
+          <ul>
+            <li><a href="quotation.php">Quotation</a></li>
+            <li><a href="loadAccount.php">Account</a></li>
+            <li><a href="createAccount.php">Invoice</a></li>
+            <li><a href="createAccount.php">Purchase Order</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="">View</a>
+          <ul>
+            <li><a href="readCustomer.php">Customers</a></li>
+            <li><a href="readProduct.php">Products</a></li>
+            <li><a href="readQuotes.php">Quotations</a></li>
+            <li><a href="readAccount.php">Accounts</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="">Print</a>
+          <ul>
+            <li><a href="printQuote.php">Quotation</a></li>
+            <li><a href="printInvoice.php">Invoice/Purchase Order</a></li>
+          </ul>
+        </li>
+        <li><a href="accLogin.php">Log Out</a>
+            
+        </li>
+      </ul>
+    </nav>
+    <h2>Customer Details</h2>
+    <form action="loadCustomer.php" method="post">
+      <div>
+        <label for="cus_name">Full Name</label>
+        <input type="text" name="cus_name" required />
+      </div>
+      <div>
+        <label for="cell">Cellphone</label>
+        <input type="tel" name="cell" required />
+      </div>
+      <div>
+        <label for="address">Home Address</label>
+        <textarea name="address" id="" cols="30" rows="6"></textarea>
+      </div>
+      <div>
+        <input type="submit" value="Upload" id="but" />
+      </div>
+    </form>
+  </body>
+</html>

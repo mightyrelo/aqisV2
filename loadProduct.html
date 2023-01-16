@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Loader</title>
+    <link rel="stylesheet" href="loadStyle.css" />
+    <link rel="stylesheet" href="accHome.css" />
+  </head>
+  <body>
+    <img src="AccLogo.png" alt="" width="300px" height="160px" />
+    <h1>AAQS - AccSight Automated Quoting System</h1>
+    <nav id="navBar">
+      <ul>
+        <li><a href="accHome.php">Home</a></li>
+        <li>
+          <a href="">Load</a>
+          <ul>
+            <li><a href="loadCustomer.html">New Customer</a></li>
+            <li><a href="loadProduct.html">New Product</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="">Create</a>
+          <ul>
+            <li><a href="quotation.php">Quotation</a></li>
+            <li><a href="loadAccount.php">Account</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="">View</a>
+          <ul>
+            <li><a href="readCustomer.php">Customers</a></li>
+            <li><a href="readProduct.php">Products</a></li>
+            <li><a href="readQuotes.php">Quotations</a></li>
+            <li><a href="readAccount.php">Accounts</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="">Print</a>
+          <ul>
+            <li><a href="printQuote.php">Quotation</a></li>
+            <li><a href="printInvoice.php">Invoice/Purchase Order</a></li>
+          </ul>
+        </li>
+        <li><a href="accLogin.php">Log Out</a></li>
+      </ul>
+    </nav>
+    <h2>Product Details</h2>
+    <form action="loadProduct.php" method="post">
+      <div>
+        <label for="pro_name">Product Name</label>
+        <input type="text" name="pro_name" required />
+      </div>
+      <div>
+        <label for="desc">Description</label>
+        <textarea name="desc" id="" cols="30" rows="6"></textarea>
+      </div>
+      <div>
+        <label for="trade">Trade Price</label>
+        <input
+          type="number"
+          name="trade"
+          min="0"
+          max="100000"
+          step="0.0100"
+          placeholder="0.02"
+          required
+        />
+      </div>
+      <div>
+        <label for="retail">Retail Price</label>
+        <input
+          type="number"
+          name="retail"
+          min="0"
+          max="100000"
+          step="0.01"
+          placeholder="0.02"
+          required
+        />
+      </div>
+
+      <div>
+        <input type="submit" value="Upload" id="but" />
+      </div>
+    </form>
+  </body>
+</html>
